@@ -1,4 +1,4 @@
-import { baseUrl, hash, publicKey } from './constants'
+import { baseUrl } from './constants'
 
 export const getAllCharacters = async () => {
   try {
