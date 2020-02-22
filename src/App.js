@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { getAllCharacters } from './client'
 import './App.css'
 
@@ -6,6 +7,7 @@ const App = () => {
   const [characters, setCharacters] = useState([])
 
   useEffect(() => {
+    console.log(process.env.PUBLIC_KEY)
     const getCharacters = async () => {
       const data = await getAllCharacters()
       setCharacters(data.results)
@@ -25,6 +27,10 @@ const App = () => {
       </ul>
     </div>
   )
+}
+
+App.propTypes = {
+  characters: PropTypes.array
 }
 
 export default App
