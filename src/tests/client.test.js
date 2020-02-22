@@ -1,4 +1,4 @@
-import characters from './testUtils/charactersSample.js'
+import characters from './utils/charactersSample.js'
 
 export const getAllCharacters = () => {
   return new Promise((resolve, reject) => {

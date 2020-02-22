@@ -12,14 +12,9 @@ const CharactersList = () => {
 
   useEffect(() => {
     getAllCharacters()
-      .then(c => {
-        setCharacters(c.data.results)
-        setIsLoading(false)
-      })
-      .catch(e => {
-        setError(e)
-        setIsLoading(false)
-      })
+      .then(res => setCharacters(res.data.results))
+      .catch(err => setError(err))
+      .then(() => setIsLoading(false))
   }, [])
 
   return (
@@ -28,7 +23,7 @@ const CharactersList = () => {
         {isLoading ? (
           <Loader></Loader>
         ) : (
-          <ul className='characters-list'>
+          <ul className='characters-list' data-testid='characters-list'>
             {characters.map((c, i) => (
               <CharacterItem key={c.name} c={c}></CharacterItem>
             ))}

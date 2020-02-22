@@ -8,5 +8,5 @@ export const getAllCharacters = async () => {
   return fetch(baseUrl + `v1/public/characters` + queryStr)
     .then(checkStatus)
     .then(parseJSON)
-    .catch(e => console.error(e))
+    .catch(err => console.error(err))
 }

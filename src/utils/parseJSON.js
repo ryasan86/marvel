@@ -1,3 +1,3 @@
-export const parseJSON = response => {
-  return response.json()
+export const parseJSON = res => {
+  return res.json()
 }
