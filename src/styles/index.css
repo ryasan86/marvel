@@ -5,8 +5,7 @@ html {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,4 +20,9 @@ li {
 .center-container {
   display: flex;
   justify-content: center;
+}
+
+.max-width {
+  width: 100%;
+  max-width: 120rem;
 }
