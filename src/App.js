@@ -7,7 +7,6 @@ const App = () => {
   const [characters, setCharacters] = useState([])
 
   useEffect(() => {
-    console.log(process.env.PUBLIC_KEY)
     const getCharacters = async () => {
       const data = await getAllCharacters()
       setCharacters(data.results)
