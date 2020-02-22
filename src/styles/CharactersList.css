@@ -1,8 +1,5 @@
-.app {
-  text-align: center;
-}
-
-.character-list {
+.characters-list {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15.82%, 1fr));
   gap: 10px;

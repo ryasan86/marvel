@@ -1,13 +1,12 @@
 import { baseUrl } from './constants'
 import { publicKey, md5 } from './config/config'
+import { checkStatus } from './utils/checkStatus'
+import { parseJSON } from './utils/parseJSON'
 
 export const getAllCharacters = async () => {
-  try {
-    const queryStr = [`?ts=1`, `limit=40`, `apikey=${publicKey}`, `hash=${md5}`].join('&')
-    const response = await fetch(baseUrl + `v1/public/characters` + queryStr)
-    const { data } = await response.json()
-    return data
-  } catch (err) {
-    console.error('Oops an error has occurred: ', err)
-  }
+  const queryStr = [`?ts=1`, `limit=36`, `apikey=${publicKey}`, `hash=${md5}`].join('&')
+  return fetch(baseUrl + `v1/public/characters` + queryStr)
+    .then(checkStatus)
+    .then(parseJSON)
+    .catch(e => console.error(e))
 }

@@ -17,3 +17,8 @@ body {
 li {
   list-style-type: none;
 }
+
+.center-container {
+  display: flex;
+  justify-content: center;
+}
