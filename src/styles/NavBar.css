@@ -1,0 +1,15 @@
+.nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background: #1f1f1f;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0 1rem;
+}
